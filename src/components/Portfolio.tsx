@@ -46,9 +46,9 @@ export function Portfolio() {
   }, []);
 
   return (
-    <section id="portfolio" className="py-24 px-6 bg-transparent relative z-10">
+    <section id="portfolio" className="py-12 md:py-24 px-6 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-4 md:gap-6">
           <div>
             <h2 className="text-[10px] uppercase tracking-[0.4em] text-accent-primary font-bold mb-4 font-condensed">Mes Créations</h2>
             <div className="relative">
@@ -58,12 +58,12 @@ export function Portfolio() {
               </div>
             </div>
           </div>
-          <p className="max-w-md text-text-secondary text-lg italic font-medium">
+          <p className="max-w-md text-text-secondary text-base md:text-lg italic font-medium">
             "Chaque création est une fenêtre ouverte sur mon imaginaire et mes compétences techniques."
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-16">
           {projects.slice(0, 3).map((project, index) => (
             <motion.div
               key={index}
@@ -72,7 +72,7 @@ export function Portfolio() {
               onClick={() => setSelectedProject(project)}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white border-2 border-text-primary cursor-pointer shadow-[6px_6px_0px_var(--color-accent-secondary)] hover:shadow-[8px_8px_0px_var(--color-accent-secondary)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-300"
+              className="group relative aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-white border-2 border-text-primary cursor-pointer shadow-[5px_5px_0px_var(--color-accent-secondary)] sm:shadow-[6px_6px_0px_var(--color-accent-secondary)] hover:shadow-[8px_8px_0px_var(--color-accent-secondary)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all duration-300"
             >
               <Image
                 src={getAssetPath(project.thumbnail)}
@@ -80,7 +80,7 @@ export function Portfolio() {
                 fill
                 className="object-cover transition-all duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 pb-14">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 sm:p-10 pb-10 sm:pb-14">
                 <span className="text-accent-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-3 font-condensed">
                   {project.category}
                 </span>

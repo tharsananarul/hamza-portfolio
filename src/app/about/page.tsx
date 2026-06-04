@@ -79,10 +79,10 @@ const experience = [
 export default function About() {
   return (
     <PageWrapper>
-      <div className="max-w-6xl mx-auto px-6 pt-28 md:pt-40 pb-20">
+      <div className="max-w-6xl mx-auto px-6 pt-24 md:pt-40 pb-12 md:pb-20">
 
         {/* ═══ HERO ═══ */}
-        <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-center lg:items-start mb-20 md:mb-32">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-20 items-center lg:items-start mb-12 md:mb-32">
 
           {/* Portrait Container with offset backing (Neo-Brutalist) */}
           <motion.div
@@ -92,8 +92,8 @@ export default function About() {
             className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] mx-auto lg:mx-0 flex-shrink-0 aspect-[3/4]"
           >
             {/* Offset Terracotta backing */}
-            <div className="absolute inset-0 bg-accent-secondary rounded-[3rem] translate-x-4 translate-y-4 neo-border z-0" />
-            <div className="absolute inset-0 rounded-[3rem] overflow-hidden neo-border bg-bg-secondary z-10">
+            <div className="absolute inset-0 bg-accent-secondary rounded-[2rem] sm:rounded-[3rem] translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 neo-border z-0" />
+            <div className="absolute inset-0 rounded-[2rem] sm:rounded-[3rem] overflow-hidden neo-border bg-bg-secondary z-10">
               <Image
                 src={getAssetPath("/images/photos-presentation/hamza-photo.png")}
                 alt="Hamza Cisse" fill sizes="380px"
@@ -133,7 +133,7 @@ export default function About() {
             </div>
 
             <div
-              className="space-y-4 text-base md:text-xl leading-relaxed mb-10 font-medium text-text-secondary"
+              className="space-y-4 text-sm sm:text-base md:text-xl leading-relaxed mb-6 md:mb-10 font-medium text-text-secondary"
             >
               <p>
                 Futur étudiant en Licence Professionnelle Communication, je suis passionné par le montage vidéo, l’image, la création visuelle et les stratégies digitales. Je suis à la recherche d'une alternance pour septembre 2026 afin de mettre en pratique mes compétences et d’apporter de la valeur à une équipe créative.
@@ -142,7 +142,7 @@ export default function About() {
 
             {/* Pills (Neo-Brutalist Style) */}
             <div
-              className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10"
+              className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6 md:mb-10"
             >
               {[
                 { icon: <MapPin size={13} />, text: "Île-de-France" },
@@ -160,7 +160,7 @@ export default function About() {
             <a
               href={getAssetPath("/cv/cv_hamza_stage.pdf")}
               download
-              className="inline-flex items-center gap-3 btn-neo-terracotta text-sm font-bold px-10 py-5 font-condensed shadow-lg"
+              className="inline-flex items-center gap-3 btn-neo-terracotta text-xs sm:text-sm font-bold px-6 py-3.5 sm:px-10 sm:py-5 font-condensed shadow-lg"
             >
               Télécharger mon CV <Download size={18} />
             </a>
@@ -175,7 +175,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="rounded-[2.5rem] p-8 md:p-12 neo-card-khaki shadow-xl"
+            className="rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-8 md:p-12 neo-card-khaki shadow-xl"
           >
             <div className="flex items-center gap-4 mb-10">
               <div
@@ -186,7 +186,7 @@ export default function About() {
               <h3 className="text-xl md:text-2xl font-display font-black text-text-primary uppercase">Formation</h3>
             </div>
 
-            <div className="space-y-10 relative">
+            <div className="space-y-8 md:space-y-10 relative">
               <div className="absolute left-[23px] top-4 bottom-4 w-[2px] bg-text-primary/10" />
               
               {education.map((item, i) => (
@@ -219,7 +219,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="rounded-[2.5rem] p-8 md:p-12 neo-card-terracotta shadow-xl"
+            className="rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-8 md:p-12 neo-card-terracotta shadow-xl"
           >
             <div className="flex items-center gap-4 mb-10">
               <div
@@ -230,7 +230,7 @@ export default function About() {
               <h3 className="text-xl md:text-2xl font-display font-black text-text-primary uppercase">Expérience</h3>
             </div>
 
-            <div className="space-y-10 relative">
+            <div className="space-y-8 md:space-y-10 relative">
               <div className="absolute left-[23px] top-4 bottom-4 w-[2px] bg-text-primary/10" />
 
               {experience.map((item, i) => (

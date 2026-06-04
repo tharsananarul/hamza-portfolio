@@ -56,7 +56,7 @@ const languages = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 md:py-32 px-6 bg-transparent relative z-10">
+    <section id="skills" className="py-12 md:py-32 px-6 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
@@ -78,7 +78,7 @@ export function Skills() {
         </div>
 
         {/* 4 Detailed Blocks */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-32">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-16 md:mb-32">
           {mainExpertise.map((exp, i) => (
             <motion.div
               key={exp.title}
@@ -86,7 +86,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-10 neo-card-khaki group shadow-lg"
+              className="p-6 sm:p-10 neo-card-khaki group shadow-lg"
             >
               <div className="w-14 h-14 bg-accent-primary text-white border-2 border-text-primary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
                 {exp.icon}
@@ -101,7 +101,7 @@ export function Skills() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-20 md:gap-24">
+        <div className="grid lg:grid-cols-3 gap-12 md:gap-24">
           
           {/* Software Column */}
           <div className="lg:col-span-2 space-y-12">
@@ -207,7 +207,7 @@ export function Skills() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="p-10 neo-card-khaki shadow-lg relative overflow-hidden group"
+              className="p-6 sm:p-10 neo-card-khaki shadow-lg relative overflow-hidden group"
             >
               <div className="absolute top-0 right-0 p-6 opacity-[0.02] text-text-primary">
                 <Target size={120} />

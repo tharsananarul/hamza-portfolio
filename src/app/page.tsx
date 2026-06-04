@@ -129,9 +129,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-6 mt-10"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10"
           >
-            <Link href="/projects" className="btn-neo-terracotta flex items-center gap-4 px-10 py-5 text-[10px] font-condensed font-bold uppercase tracking-[0.2em]">
+            <Link href="/projects" className="btn-neo-terracotta flex items-center gap-3 sm:gap-4 px-6 py-3.5 sm:px-10 sm:py-5 text-[10px] font-condensed font-bold uppercase tracking-[0.2em]">
               Découvrir mes projets
               <motion.div
                 animate={{ x: [0, 5, 0] }}
@@ -140,26 +140,26 @@ export default function Home() {
                 <ArrowRight size={16} />
               </motion.div>
             </Link>
-            <Link href="/contact" className="btn-neo-outline flex items-center gap-4 px-10 py-5 text-[10px] font-condensed font-bold uppercase tracking-[0.2em]">
+            <Link href="/contact" className="btn-neo-outline flex items-center gap-3 sm:gap-4 px-6 py-3.5 sm:px-10 sm:py-5 text-[10px] font-condensed font-bold uppercase tracking-[0.2em]">
               Travaillons ensemble
             </Link>
           </motion.div>
           
         </div>
       </section>
-
+ 
       {/* ════════════ BIO / ABOUT SECTION ════════════ */}
-      <section className="relative z-20 py-20 md:py-36 px-6 md:px-12 lg:px-24 border-t-2 border-text-primary bg-bg-secondary/40">
+      <section className="relative z-20 py-12 md:py-36 px-6 md:px-12 lg:px-24 border-t-2 border-text-primary bg-bg-secondary/40">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-24 items-center">
             
             {/* Left Column: Portrait photo with offset solid background */}
             <div className="lg:col-span-5 order-2 lg:order-1">
-              <div className="relative w-full max-w-md mx-auto lg:mx-0 aspect-[4/5]">
+              <div className="relative w-full max-w-[260px] sm:max-w-md mx-auto lg:mx-0 aspect-[4/5]">
                 {/* Offset backing */}
-                <div className="absolute inset-0 bg-accent-primary rounded-[2.5rem] translate-x-4 translate-y-4 neo-border z-0" />
+                <div className="absolute inset-0 bg-accent-primary rounded-[2rem] sm:rounded-[2.5rem] translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 neo-border z-0" />
                 {/* Outlined image */}
-                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden neo-border bg-bg-secondary z-10 img-zoom">
+                <div className="absolute inset-0 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden neo-border bg-bg-secondary z-10 img-zoom">
                   <Image
                     src={getAssetPath("/images/photos-presentation/hamza-photo.png")}
                     alt="Hamza Cisse Portrait"
@@ -169,9 +169,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+ 
             {/* Right Column: Narrative */}
-            <div className="lg:col-span-7 order-1 lg:order-2 space-y-10">
+            <div className="lg:col-span-7 order-1 lg:order-2 space-y-6 md:space-y-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -181,57 +181,57 @@ export default function Home() {
                   Découvrir mon parcours <ArrowRight size={14} />
                 </Link>
                 
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-text-primary tracking-tighter leading-[1.05] mb-6 uppercase">
+                <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-text-primary tracking-tighter leading-[1.05] mb-4 md:mb-6 uppercase">
                   L'impact visuel <br />
                   <span className="text-accent-primary italic-display">au service de l'image.</span>
                 </h2>
                 
-                <p className="text-sm md:text-lg text-text-secondary leading-relaxed mb-8 max-w-2xl font-medium">
+                <p className="text-xs sm:text-base md:text-lg text-text-secondary leading-relaxed mb-6 md:mb-8 max-w-2xl font-medium">
                   Futur étudiant en Licence Professionnelle Communication, je suis passionné par l'image, le montage vidéo et la communication digitale. Je crée des montages inspirés des tendances actuelles, souvent dans des formats courts de moins de 20 secondes. Autodidacte déterminé, j'affine mes compétences en permanence et je recherche activement une alternance pour septembre 2026.
                 </p>
-
+ 
                 {/* Stats Grid (Neo-Brutalist Outlined Cards) */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-10 border-y-2 border-text-primary/10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 py-6 md:py-10 border-y-2 border-text-primary/10">
                   {[
                     { label: "Formation", value: "Licence Pro" },
                     { label: "Spécialité", value: "Vidéo & Image" },
                     { label: "Compétences", value: "Montage & PAO" },
                     { label: "Besoin Actuel", value: "Alternance" },
                   ].map((stat, i) => (
-                    <div key={i} className="space-y-1 bg-white p-4 rounded-xl border border-text-primary/10 shadow-[3px_3px_0px_var(--color-accent-primary)]">
+                    <div key={i} className="space-y-1 bg-white p-3 md:p-4 rounded-xl border border-text-primary/10 shadow-[2px_2px_0px_var(--color-accent-primary)] sm:shadow-[3px_3px_0px_var(--color-accent-primary)]">
                       <p className="text-[9px] font-condensed uppercase tracking-widest text-accent-primary font-bold">{stat.label}</p>
-                      <p className="text-sm md:text-base font-display font-bold text-text-primary uppercase tracking-tight">{stat.value}</p>
+                      <p className="text-xs sm:text-sm md:text-base font-display font-bold text-text-primary uppercase tracking-tight">{stat.value}</p>
                     </div>
                   ))}
                 </div>
               </motion.div>
             </div>
-
+ 
           </div>
         </div>
       </section>
-
+ 
       {/* Projects Grid Section */}
       <Portfolio />
-
+ 
       {/* ════════════ FINAL CTA BLOCK ════════════ */}
-      <section className="py-20 md:py-32 px-6 relative border-t-2 border-text-primary">
+      <section className="py-12 md:py-32 px-6 relative border-t-2 border-text-primary">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative p-10 md:p-24 rounded-[3rem] text-center neo-card-terracotta"
+            className="relative p-6 sm:p-10 md:p-24 rounded-[2rem] sm:rounded-[3rem] text-center neo-card-terracotta"
           >
             <div className="relative z-10">
-              <span className="text-[10px] font-condensed uppercase tracking-[0.5em] font-bold text-accent-primary mb-8 block">
+              <span className="text-[10px] font-condensed uppercase tracking-[0.5em] font-bold text-accent-primary mb-4 md:mb-8 block">
                 Alternance Septembre 2026
               </span>
-              <h4 className="text-2xl md:text-5xl font-display font-bold text-text-primary leading-snug mb-12 max-w-4xl mx-auto text-balance uppercase tracking-tight">
+              <h4 className="text-lg sm:text-2xl md:text-5xl font-display font-bold text-text-primary leading-snug mb-6 md:mb-12 max-w-4xl mx-auto text-balance uppercase tracking-tight">
                 "Actuellement à la recherche d’un contrat d'alternance pour septembre 2026, je souhaite mettre en pratique mes compétences. Si vous cherchez un profil créatif et déterminé, contactez-moi !"
               </h4>
-              <Link href="/contact" className="btn-neo-terracotta inline-flex items-center gap-5 px-12 py-6 rounded-full text-[10px] font-condensed font-bold uppercase tracking-widest">
+              <Link href="/contact" className="btn-neo-terracotta inline-flex items-center gap-3 sm:gap-5 px-8 py-4 sm:px-12 sm:py-6 rounded-full text-[10px] font-condensed font-bold uppercase tracking-widest">
                 Me contacter <ArrowRight size={18} />
               </Link>
             </div>
