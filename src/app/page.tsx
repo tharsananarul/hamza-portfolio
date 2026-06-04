@@ -87,7 +87,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, x: -50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -top-4 left-4 sm:left-[10%] sm:top-[40%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
+                className="absolute -top-12 left-4 sm:left-[10%] sm:top-[40%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
               >
                 Creative Visual
               </motion.div>
