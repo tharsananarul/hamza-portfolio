@@ -1,4 +1,4 @@
-const basePath = "/Portfolio";
+const basePath = "/hamza-portfolio";
 
 export default function imageLoader({ src }: { src: string }) {
   if (src.startsWith("http")) return src;
