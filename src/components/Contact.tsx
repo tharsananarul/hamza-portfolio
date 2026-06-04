@@ -46,8 +46,8 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-transparent relative z-10 text-text-primary">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+    <section id="contact" className="py-12 md:py-24 px-6 bg-transparent relative z-10 text-text-primary">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16">
         <div>
           <span className="text-[10px] uppercase tracking-[0.4em] text-accent-primary font-bold mb-4 block font-condensed">
             Contact
@@ -108,7 +108,7 @@ export function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="neo-card-terracotta p-8 md:p-12"
+          className="neo-card-terracotta p-5 sm:p-8 md:p-12"
         >
           {formState.submitted ? (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-12">
@@ -136,7 +136,7 @@ export function Contact() {
                     name="name"
                     required
                     type="text"
-                    className="w-full bg-white border-2 border-text-primary rounded-xl px-5 py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm"
+                    className="w-full bg-white border-2 border-text-primary rounded-xl px-4 py-3 sm:px-5 sm:py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm"
                     placeholder="Jean Dupont"
                   />
                 </div>
@@ -146,7 +146,7 @@ export function Contact() {
                     name="email"
                     required
                     type="email"
-                    className="w-full bg-white border-2 border-text-primary rounded-xl px-5 py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm"
+                    className="w-full bg-white border-2 border-text-primary rounded-xl px-4 py-3 sm:px-5 sm:py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm"
                     placeholder="jean@exemple.com"
                   />
                 </div>
@@ -157,7 +157,7 @@ export function Contact() {
                   name="subject"
                   required
                   type="text"
-                  className="w-full bg-white border-2 border-text-primary rounded-xl px-5 py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm"
+                  className="w-full bg-white border-2 border-text-primary rounded-xl px-4 py-3 sm:px-5 sm:py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm"
                   placeholder="Collaboration..."
                 />
               </div>
@@ -167,13 +167,13 @@ export function Contact() {
                   name="message"
                   required
                   rows={4}
-                  className="w-full bg-white border-2 border-text-primary rounded-2xl px-5 py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm resize-none"
+                  className="w-full bg-white border-2 border-text-primary rounded-2xl px-4 py-3 sm:px-5 sm:py-4 focus:outline-none focus:bg-bg-secondary focus:shadow-[3px_3px_0px_var(--color-text-primary)] transition-all text-text-primary placeholder:opacity-30 text-sm resize-none"
                   placeholder="Dites-moi tout !"
                 />
               </div>
               <button 
                 type="submit"
-                className="w-full py-4 btn-neo-terracotta font-bold flex items-center justify-center gap-2"
+                className="w-full py-3 sm:py-4 btn-neo-terracotta font-bold flex items-center justify-center gap-2"
               >
                 Envoyer <Send size={16} />
               </button>

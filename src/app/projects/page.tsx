@@ -186,7 +186,7 @@ export default function Projects() {
     <PageWrapper>
       {selected && <MediaModal project={selected} onClose={closeModal} />}
 
-      <div className="max-w-7xl mx-auto px-6 pt-28 md:pt-40 pb-20">
+      <div className="max-w-7xl mx-auto px-6 pt-32 md:pt-40 pb-20">
         
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-24 space-y-10">
@@ -231,7 +231,7 @@ export default function Projects() {
         {/* Grid Section */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 pb-24"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pb-24"
         >
           {filteredProjects.map((project, i) => (
             <motion.div
@@ -240,7 +240,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative aspect-[3.5/4.5] rounded-[2.5rem] overflow-hidden bg-white border-2 border-text-primary cursor-pointer shadow-[6px_6px_0px_var(--color-accent-secondary)] hover:shadow-[8px_8px_0px_var(--color-accent-secondary)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
+              className="group relative aspect-[3.5/4.5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-white border-2 border-text-primary cursor-pointer shadow-[4px_4px_0px_var(--color-accent-secondary)] sm:shadow-[6px_6px_0px_var(--color-accent-secondary)] hover:shadow-[8px_8px_0px_var(--color-accent-secondary)] hover:translate-x-[-2px] hover:translate-y-[-2px]"
               onClick={() => setSelected(project)}
             >
               <Image
@@ -250,7 +250,7 @@ export default function Projects() {
                 className="object-cover transition-all duration-1000 group-hover:scale-105 group-hover:brightness-[0.8] brightness-[0.95]"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-12">
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
                   <span className="text-accent-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-3 block font-condensed">
                     {project.category}

@@ -125,43 +125,78 @@
 
   /* Neo-Brutalist Layout Tokens */
   .neo-border {
-    border: 2.5px solid var(--color-text-primary) !important;
+    border: 2px solid var(--color-text-primary) !important;
+  }
+  @media (min-width: 640px) {
+    .neo-border {
+      border: 2.5px solid var(--color-text-primary) !important;
+    }
   }
 
   .neo-card {
     background: var(--color-surface);
-    border: 2.5px solid var(--color-text-primary);
-    border-radius: 1.5rem;
-    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .neo-card:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0px 0px var(--color-text-primary);
+    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+  }
+  @media (min-width: 640px) {
+    .neo-card {
+      border: 2.5px solid var(--color-text-primary);
+      border-radius: 1.5rem;
+      box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    }
+    .neo-card:hover {
+      box-shadow: 8px 8px 0px 0px var(--color-text-primary);
+    }
   }
 
   .neo-card-khaki {
     background: var(--color-surface);
-    border: 2.5px solid var(--color-text-primary);
-    border-radius: 1.5rem;
-    box-shadow: 6px 6px 0px 0px var(--color-accent-primary);
+    border: 2px solid var(--color-text-primary);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 0px 0px var(--color-accent-primary);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .neo-card-khaki:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0px 0px var(--color-accent-primary);
+    box-shadow: 6px 6px 0px 0px var(--color-accent-primary);
+  }
+  @media (min-width: 640px) {
+    .neo-card-khaki {
+      border: 2.5px solid var(--color-text-primary);
+      border-radius: 1.5rem;
+      box-shadow: 6px 6px 0px 0px var(--color-accent-primary);
+    }
+    .neo-card-khaki:hover {
+      box-shadow: 8px 8px 0px 0px var(--color-accent-primary);
+    }
   }
 
   .neo-card-terracotta {
     background: var(--color-surface);
-    border: 2.5px solid var(--color-text-primary);
-    border-radius: 1.5rem;
-    box-shadow: 6px 6px 0px 0px var(--color-accent-secondary);
+    border: 2px solid var(--color-text-primary);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 0px 0px var(--color-accent-secondary);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .neo-card-terracotta:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0px 0px var(--color-accent-secondary);
+    box-shadow: 6px 6px 0px 0px var(--color-accent-secondary);
+  }
+  @media (min-width: 640px) {
+    .neo-card-terracotta {
+      border: 2.5px solid var(--color-text-primary);
+      border-radius: 1.5rem;
+      box-shadow: 6px 6px 0px 0px var(--color-accent-secondary);
+    }
+    .neo-card-terracotta:hover {
+      box-shadow: 8px 8px 0px 0px var(--color-accent-secondary);
+    }
   }
 
   /* Shifting buttons */
@@ -169,52 +204,76 @@
     background: var(--color-accent-primary);
     color: #ffffff;
     border: 2px solid var(--color-text-primary);
-    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    box-shadow: 3px 3px 0px 0px var(--color-text-primary);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     border-radius: 9999px;
   }
   .btn-neo-khaki:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
   }
   .btn-neo-khaki:active {
     transform: translate(2px, 2px);
     box-shadow: 0px 0px 0px 0px var(--color-text-primary);
+  }
+  @media (min-width: 640px) {
+    .btn-neo-khaki {
+      box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    }
+    .btn-neo-khaki:hover {
+      box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    }
   }
 
   .btn-neo-terracotta {
     background: var(--color-accent-secondary);
     color: #ffffff;
     border: 2px solid var(--color-text-primary);
-    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    box-shadow: 3px 3px 0px 0px var(--color-text-primary);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     border-radius: 9999px;
   }
   .btn-neo-terracotta:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
   }
   .btn-neo-terracotta:active {
     transform: translate(2px, 2px);
     box-shadow: 0px 0px 0px 0px var(--color-text-primary);
+  }
+  @media (min-width: 640px) {
+    .btn-neo-terracotta {
+      box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    }
+    .btn-neo-terracotta:hover {
+      box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    }
   }
 
   .btn-neo-outline {
     background: transparent;
     color: var(--color-text-primary);
     border: 2px solid var(--color-text-primary);
-    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    box-shadow: 3px 3px 0px 0px var(--color-text-primary);
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     border-radius: 9999px;
   }
   .btn-neo-outline:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
     background: var(--color-bg-secondary);
   }
   .btn-neo-outline:active {
     transform: translate(2px, 2px);
     box-shadow: 0px 0px 0px 0px var(--color-text-primary);
+  }
+  @media (min-width: 640px) {
+    .btn-neo-outline {
+      box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    }
+    .btn-neo-outline:hover {
+      box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    }
   }
 
   .italic-display {
