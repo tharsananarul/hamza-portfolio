@@ -24,7 +24,7 @@ export default function Home() {
     <PageWrapper>
       
       {/* ════════════ HERO SECTION ════════════ */}
-      <section ref={heroRef} className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-16 sm:pt-28 pb-8 overflow-hidden">
+      <section ref={heroRef} className="relative min-h-[90vh] flex flex-col justify-start md:justify-center px-6 md:px-12 lg:px-24 pt-24 md:pt-28 pb-8 overflow-hidden">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center relative z-20">
           
           {/* Availability Badge (Neo-Brutalist Style) */}
@@ -45,7 +45,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 1 }}
-              className="absolute left-2 md:left-12 top-0 font-condensed text-[10px] md:text-xs uppercase tracking-[0.4em] text-text-secondary font-bold bg-bg-secondary px-3 py-1.5 rounded-lg border border-text-primary/10"
+              className="absolute left-2 md:left-12 top-0 font-condensed text-[10px] md:text-xs uppercase tracking-[0.4em] text-text-secondary font-bold bg-bg-secondary px-3 py-1.5 rounded-lg border border-text-primary/10 hidden sm:block"
             >
               VIDEO EDITOR
             </motion.div>
@@ -87,7 +87,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, x: -50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute -top-12 left-4 sm:left-[10%] sm:top-[40%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
+                className="absolute top-[68%] sm:top-[40%] left-[-2%] sm:left-[10%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
               >
                 Creative Visual
               </motion.div>
@@ -97,7 +97,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
                 animate={{ opacity: 1, scale: 1, rotate: -6 }}
                 transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[80%] sm:-translate-y-[70%] font-script text-[10vw] sm:text-7xl md:text-8xl lg:text-[9.5rem] text-accent-secondary z-10 select-none pointer-events-none opacity-90"
+                className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[125%] sm:-translate-y-[70%] font-script text-[10vw] sm:text-7xl md:text-8xl lg:text-[9.5rem] text-accent-secondary z-10 select-none pointer-events-none opacity-90"
               >
                 View My
               </motion.div>
@@ -108,7 +108,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 1 }}
-              className="absolute right-2 md:right-12 bottom-0 font-condensed text-[10px] md:text-xs uppercase tracking-[0.4em] text-text-secondary font-bold bg-bg-secondary px-3 py-1.5 rounded-lg border border-text-primary/10"
+              className="absolute right-2 md:right-12 bottom-0 font-condensed text-[10px] md:text-xs uppercase tracking-[0.4em] text-text-secondary font-bold bg-bg-secondary px-3 py-1.5 rounded-lg border border-text-primary/10 hidden sm:block"
             >
               COMMUNICATION DIGITALE
             </motion.div>
