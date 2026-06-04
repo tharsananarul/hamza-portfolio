@@ -58,8 +58,8 @@ export function Navbar() {
         >
           {/* Logo */}
           <Magnetic strength={0.2}>
-            <div className="relative group z-[110]">
-              <Link href="/" className="flex items-center gap-2 md:gap-4">
+            <div className="relative group z-[140]">
+              <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2 md:gap-4">
                 <div className="relative w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-xl bg-accent-primary/10 border-2 border-text-primary text-text-primary transition-all duration-300 group-hover:shadow-[2px_2px_0px_var(--color-text-primary)] shadow-sm">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 md:w-6 md:h-6 text-text-primary transition-transform duration-300">
                     <rect x="3" y="3" width="18" height="18" rx="2" />

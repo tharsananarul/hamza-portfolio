@@ -24,14 +24,14 @@ export default function Home() {
     <PageWrapper>
       
       {/* ════════════ HERO SECTION ════════════ */}
-      <section ref={heroRef} className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-28 pb-12 overflow-hidden">
+      <section ref={heroRef} className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-16 sm:pt-28 pb-8 overflow-hidden">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center relative z-20">
           
           {/* Availability Badge (Neo-Brutalist Style) */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-accent-secondary text-white font-condensed font-bold text-[10px] uppercase tracking-[0.15em] neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] mb-10"
+            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-accent-secondary text-white font-condensed font-bold text-[10px] uppercase tracking-[0.15em] neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] mb-5 sm:mb-10"
           >
             <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
             Recherche d'alternance — Septembre 2026
@@ -87,7 +87,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, x: -50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute left-[-2%] sm:left-[10%] top-[40%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
+                className="absolute -top-4 left-4 sm:left-[10%] sm:top-[40%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
               >
                 Creative Visual
               </motion.div>
@@ -97,7 +97,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
                 animate={{ opacity: 1, scale: 1, rotate: -6 }}
                 transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[70%] font-script text-[10vw] sm:text-7xl md:text-8xl lg:text-[9.5rem] text-accent-secondary z-10 select-none pointer-events-none opacity-90"
+                className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[80%] sm:-translate-y-[70%] font-script text-[10vw] sm:text-7xl md:text-8xl lg:text-[9.5rem] text-accent-secondary z-10 select-none pointer-events-none opacity-90"
               >
                 View My
               </motion.div>
