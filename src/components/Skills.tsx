@@ -109,7 +109,7 @@ export function Skills() {
               <span className="w-12 h-1 bg-accent-primary rounded-full" /> Logiciels Maîtrisés
             </h4>
             {/* Software Grid */}
-            <div className="grid grid-cols-3 gap-3 md:gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-8">
               {softwareSkills.map((s, i) => (
                 <motion.div
                   key={s.name}
@@ -137,8 +137,8 @@ export function Skills() {
                       </div>
                     </motion.div>
                     <div className="min-w-0 w-full">
-                      <p className="font-display font-black text-xs md:text-2xl group-hover:text-accent-secondary transition-colors leading-tight mb-1 md:mb-3 truncate text-text-primary uppercase tracking-tight">{s.name}</p>
-                      <p className="text-[7px] md:text-xs uppercase tracking-[0.2em] text-text-secondary opacity-80 font-bold leading-tight font-condensed">{s.desc}</p>
+                      <p className="font-display font-black text-sm sm:text-lg md:text-2xl group-hover:text-accent-secondary transition-colors leading-tight mb-1 md:mb-3 truncate text-text-primary uppercase tracking-tight">{s.name}</p>
+                      <p className="text-[9px] sm:text-xs uppercase tracking-[0.2em] text-text-secondary opacity-80 font-bold leading-tight font-condensed">{s.desc}</p>
                     </div>
                   </div>
                   

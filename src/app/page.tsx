@@ -76,7 +76,7 @@ export default function Home() {
             <div className="relative select-none text-center py-4">
               {/* Back Block Text: PORTFOLIO */}
               <h1 
-                className="font-display font-black text-6xl sm:text-8xl md:text-[10rem] lg:text-[11.5rem] leading-none tracking-tighter uppercase text-text-primary flex justify-center items-center gap-0"
+                className="font-display font-black text-[13vw] sm:text-[11vw] md:text-[10rem] lg:text-[11.5rem] leading-none tracking-tighter uppercase text-text-primary flex justify-center items-center gap-0"
               >
                 <span className="text-accent-primary">P</span>
                 <span>ORTFOLIO</span>
@@ -87,7 +87,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, x: -50 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="absolute left-[-5%] sm:left-[10%] top-[40%] text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] px-4 py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
+                className="absolute left-[-2%] sm:left-[10%] top-[40%] text-[8px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 sm:px-4 py-1.5 sm:py-2 bg-accent-secondary text-white rounded-lg neo-border shadow-[3px_3px_0px_0px_var(--color-text-primary)] z-20"
               >
                 Creative Visual
               </motion.div>
@@ -97,7 +97,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
                 animate={{ opacity: 1, scale: 1, rotate: -6 }}
                 transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[70%] font-script text-5xl sm:text-7xl md:text-8xl lg:text-[9.5rem] text-accent-secondary z-10 select-none pointer-events-none opacity-90"
+                className="absolute left-1/2 top-1/2 -translate-x-[45%] -translate-y-[70%] font-script text-[10vw] sm:text-7xl md:text-8xl lg:text-[9.5rem] text-accent-secondary z-10 select-none pointer-events-none opacity-90"
               >
                 View My
               </motion.div>
