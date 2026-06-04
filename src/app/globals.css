@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&family=Alex+Brush&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans:    "Outfit", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-script:  "Alex Brush", cursive;
+  --font-condensed: "Barlow Condensed", sans-serif;
+
+  /* ── Light Neo-Brutalist Khaki & Terracotta Theme ── */
+  --color-bg-main: #f4f5f0;
+  --color-bg-secondary: #ebede4;
+  --color-surface: #ffffff;
+  --color-text-primary: #151b12;
+  --color-text-secondary: #4c5449;
+  --color-accent-primary: #4a5e45;
+  --color-accent-secondary: #d98a41;
+  --color-border-main: #151b12;
+}
+
+@layer base {
+  html, body {
+    scroll-behavior: smooth;
+    background-color: var(--color-bg-main);
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    touch-action: pan-y;
+  }
+
+  body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  input, textarea, select {
+    color: var(--color-text-primary) !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: var(--color-text-secondary) !important;
+    opacity: 0.65 !important;
+  }
+
+  /* ── Background Grid Pattern ── */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.12;
+    background-size: 24px 24px;
+    background-image: 
+      linear-gradient(to right, var(--color-text-secondary) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-text-secondary) 1px, transparent 1px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  main {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    font-weight: 900;
+  }
+
+  ::selection {
+    background: var(--color-accent-primary);
+    color: #ffffff;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-main);
+    border-left: 2px solid var(--color-text-primary);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-accent-primary);
+    border: 2px solid var(--color-text-primary);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-secondary);
+  }
+}
+
+@layer utilities {
+  /* Explicit Color Utility Overrides for Maximum Compatibility on White Surfaces */
+  .text-text-primary {
+    color: var(--color-text-primary) !important;
+  }
+  .text-text-secondary {
+    color: var(--color-text-secondary) !important;
+  }
+  .border-text-primary {
+    border-color: var(--color-text-primary) !important;
+  }
+  .bg-bg-secondary {
+    background-color: var(--color-bg-secondary) !important;
+  }
+
+  /* Font Families */
+  .font-script {
+    font-family: var(--font-script), cursive !important;
+  }
+  .font-condensed {
+    font-family: var(--font-condensed), sans-serif !important;
+  }
+
+  /* Neo-Brutalist Layout Tokens */
+  .neo-border {
+    border: 2.5px solid var(--color-text-primary) !important;
+  }
+
+  .neo-card {
+    background: var(--color-surface);
+    border: 2.5px solid var(--color-text-primary);
+    border-radius: 1.5rem;
+    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .neo-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px 0px var(--color-text-primary);
+  }
+
+  .neo-card-khaki {
+    background: var(--color-surface);
+    border: 2.5px solid var(--color-text-primary);
+    border-radius: 1.5rem;
+    box-shadow: 6px 6px 0px 0px var(--color-accent-primary);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .neo-card-khaki:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px 0px var(--color-accent-primary);
+  }
+
+  .neo-card-terracotta {
+    background: var(--color-surface);
+    border: 2.5px solid var(--color-text-primary);
+    border-radius: 1.5rem;
+    box-shadow: 6px 6px 0px 0px var(--color-accent-secondary);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .neo-card-terracotta:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px 0px var(--color-accent-secondary);
+  }
+
+  /* Shifting buttons */
+  .btn-neo-khaki {
+    background: var(--color-accent-primary);
+    color: #ffffff;
+    border: 2px solid var(--color-text-primary);
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 9999px;
+  }
+  .btn-neo-khaki:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+  }
+  .btn-neo-khaki:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px var(--color-text-primary);
+  }
+
+  .btn-neo-terracotta {
+    background: var(--color-accent-secondary);
+    color: #ffffff;
+    border: 2px solid var(--color-text-primary);
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 9999px;
+  }
+  .btn-neo-terracotta:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+  }
+  .btn-neo-terracotta:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px var(--color-text-primary);
+  }
+
+  .btn-neo-outline {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
+    box-shadow: 4px 4px 0px 0px var(--color-text-primary);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 9999px;
+  }
+  .btn-neo-outline:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px var(--color-text-primary);
+    background: var(--color-bg-secondary);
+  }
+  .btn-neo-outline:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px var(--color-text-primary);
+  }
+
+  .italic-display {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 800;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .img-zoom { 
+    overflow: hidden;
+    border-radius: inherit;
+  }
+  .img-zoom img { 
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1); 
+  }
+  .img-zoom:hover img { 
+    transform: scale(1.03); 
+  }
+}
